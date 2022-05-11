@@ -3,7 +3,11 @@
 if (!defined('_GNUBOARD_')) exit;
 define('G5_MYSQL_HOST', 'localhost');
 define('G5_MYSQL_USER', 'root');
-define('G5_MYSQL_PASSWORD', 'heedong');
+if($_SERVER['HTTP_HOST'] == 'ec2-15-165-161-193.ap-northeast-2.compute.amazonaws.com'){
+    define('G5_MYSQL_PASSWORD', 'wefact2022!');
+}else{
+    define('G5_MYSQL_PASSWORD', 'heedong');
+}
 define('G5_MYSQL_DB', 'g5');
 define('G5_MYSQL_SET_MODE', true);
 
